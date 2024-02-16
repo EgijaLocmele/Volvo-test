@@ -1,4 +1,160 @@
 body {
-  background: steelblue;
-  color: white;
+  margin: 2%;
+}
+
+.button-round {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.button-round:hover {
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.pagination-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: #1f2022;
+}
+
+.link-icon {
+  vertical-align: middle;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.carousel-control {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: calc(75% - 2.5px);
+  margin-right: 10px;
+}
+
+.carousel-item:last-child {
+  padding-right: 0;
+}
+
+.carousel-item:first-child {
+  padding-left: 0;
+}
+
+.carousel-item-image {
+  width: 100%;
+  height: "auto";
+}
+
+.carousel-item-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.carousel-item-text-block {
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.carousel-item-text-block-second {
+  margin: 0;
+}
+
+.carousel-item-text-block-first {
+  margin: 0 5px 0 0;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.carousel-item-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.carousel-item-links-first {
+  padding-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.carousel-item-links-second {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: 750px) {
+  .carousel {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .carousel-item {
+    width: calc(25% - 10px);
+    margin-right: 10px;
+  }
+
+  .carousel-item:last-child {
+    margin-right: 0;
+  }
+
+  .carousel-control {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .pagination-dots {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  body {
+    margin: 2% 5%;
+  }
+
+  .carousel-item {
+    margin-right: 15px;
+  }
+
+  .carousel-item:last-child {
+    margin-right: 0;
+  }
+
+  .carousel-item-text-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carousel-item-text-block-first {
+    margin-bottom: 5px;
+  }
 }
